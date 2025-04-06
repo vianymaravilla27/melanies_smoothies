@@ -55,7 +55,7 @@ if st.button("Submit Order"):
 
 
 
-if igredients_list:
+if ingredients_list:
   ingredients_string = ''
 
   for fruit_chosen in ingredients_list:
