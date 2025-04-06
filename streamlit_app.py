@@ -53,9 +53,16 @@ if st.button("Submit Order"):
 
 
 import requests
-smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-#st.text(smoothiefroot_response.json())
-sf_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width = True)
+
+if igredients_list:
+  ingredients_string = ''
+
+  for fruit_chosen in ingredients_list:
+    ingredients_string += fruit_chosen + ' '
+    smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+    sf_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width = True)
+
+
 
 
 
