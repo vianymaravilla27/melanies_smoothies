@@ -1,6 +1,7 @@
 import streamlit as st
 # from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col
+import requests
 cnx = st.connection("snowflake", type="snowflake")
 session = cnx.session()
 
@@ -52,7 +53,7 @@ if st.button("Submit Order"):
         st.success("Your Smoothie is ordered!", icon="✅")
 
 
-import requests
+
 
 if igredients_list:
   ingredients_string = ''
